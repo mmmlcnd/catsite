@@ -204,6 +204,21 @@ h2 .adoption:after {
 	padding: 5% 0;
 }
 
+.js-boxes {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s;
+	transform: translateY(150px);
+}
+
+.is-active {
+	/*要素を表示させる*/
+	opacity: 1;
+	visibility: visible;
+	/*元の位置に戻す*/
+	transform: translateY(0);
+}
+
 #aboutArea{
 	margin: 0 0 0 auto;
 }
@@ -359,7 +374,7 @@ a#camAreaAnchor {
 	max-width: 100%;
 	padding-bottom: 10%; 
 	margin: 0 auto;
-	vertical-align: bottom;
+	/* vertical-align: bottom; */
 }
 
 .map iframe {

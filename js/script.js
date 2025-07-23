@@ -3,11 +3,11 @@ jQuery(function($){
 $(function(){
 	
 	//drawer
-	var checkArea=$("#drawer-checkbox");//チェック判断するラジオボタン
-	var tap=$("#drawer-icon");//ドロワーメニュー
-	var gNaviArea=$("#gNavi");//グローバルナビゲーションエリア
-	var pageLink=$("#gNavi ul li a");//ページ内リンク
-	var closeArea=$("#drawer-close");//クローズエリア
+	let checkArea=$("#drawer-checkbox");//チェック判断するラジオボタン
+	let tap=$("#drawer-icon");//ドロワーメニュー
+	let gNaviArea=$("#gNavi");//グローバルナビゲーションエリア
+	let pageLink=$("#gNavi ul li a");//ページ内リンク
+	let closeArea=$("#drawer-close");//クローズエリア
 	
 	//タップをしたらクラスをつけたりはずしたりする
 	$(tap).on("click",function(){
@@ -62,14 +62,14 @@ $(function(){
 	
 //ヘッダーそのまま固定
 
-  var $win = $(window),
+  let $win = $(window),
       $main = $('main'),
       $ch = $('.homeH'),
       chHeight = $ch.outerHeight(),
       fixedClass = 'fixedH';
 
   $win.on('load scroll', function() {
-    var value = $(this).scrollTop();
+    let value = $(this).scrollTop();
     if ( value > 100 ) {
       $ch.addClass(fixedClass);
       $main.css('margin-top', chHeight);
@@ -88,17 +88,17 @@ $(function(){
 
 
 $(function () {
-    var headH = $("header").outerHeight();
-    var animeSpeed = 500;
-    var id = $("body").attr("id");
+    let headH = $("header").outerHeight();
+    let animeSpeed = 500;
+    let id = $("body").attr("id");
     //グロナビアンカー
     $(".nav_anc").on("click", function () {
-        var currentUrl = location.pathname; //URLのパス名を取得
-        var url1 = currentUrl.split("/"); //パスを「/」区切りで分割
-        var targetUrl = $(this).children("a").attr("href"); //リンク先のURLを取得（リンク先はルートパスで指定）
-        var url2 = targetUrl.split("/"); //リンク先URLを「/」区切りで分割
-        var target;
-        var position;
+        let currentUrl = location.pathname; //URLのパス名を取得
+        let url1 = currentUrl.split("/"); //パスを「/」区切りで分割
+        let targetUrl = $(this).children("a").attr("href"); //リンク先のURLを取得（リンク先はルートパスで指定）
+        let url2 = targetUrl.split("/"); //リンク先URLを「/」区切りで分割
+        let target;
+        let position;
         $(".pulldown").hide();
         //現在地がTOPページの場合
         if (id === "aboutArea") { //bodyにid「aboutArea」が有る場合
@@ -121,4 +121,23 @@ $(function () {
             return false;
         }
     });
+
+	$(function () {
+		window.addEventListener("scroll", function(){
+			//スクロール量
+			const scroll = window.scrollY;
+			const windowHeight = window.innerHeight;
+			const boxes = document.querySelectorAll(".js-boxes");
+
+			boxes.forEach(function(box){
+				const distanceToBox = box.offsetTop;
+
+				if (scroll + windowHeight > distanceToBox) {
+					box.classList.add("is-active");
+				} else {
+					box.classList.remove("is-active"); // スクロールで見えなくなったらクラスを削除
+				}
+			});
+		});
+	});
 });
