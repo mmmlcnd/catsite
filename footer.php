@@ -1,7 +1,7 @@
 		<a id="camAreaAnchor" class="anchor"></a>
 		<div class="camArea">		
 			<div class="caArea">
-				<div id="contactArea">
+				<div id="contactArea" class="js-boxes">
 					<a href="<?php echo get_permalink(11); ?>">
 						<h3><span>お問い合わせ</span></h3>
 						<img src="<?php echo get_template_directory_uri(); ?>/images/contact.png" alt="">
@@ -9,7 +9,7 @@
 					</a>
 				</div><!--/#contactArea-->
 				<a id="accessAreaAnchor" class="anchor"></a>
-				<div id="accessArea">
+				<div id="accessArea" class="js-boxes">
 						<h3><span>アクセス</span></h3>
 						<div class="accessT">
 							<p>〒000-0000 神戸市中央区A町00</p>
@@ -18,7 +18,7 @@
 						</div>
 				</div><!--/#accessArea-->
 			</div><!--/.caArea-->
-			<div class="map">
+			<div class="map js-boxes">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.6660809038726!2d135.19095871496958!3d34.6883761913863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008efbd89bc4e7%3A0xd901fd97f5288c44!2z44CSNjUwLTAwMzQg5YW15bqr55yM56We5oi45biC5Lit5aSu5Yy65Lqs55S677yW77yX!5e0!3m2!1sja!2sjp!4v1580296857980!5m2!1sja!2sjp" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 			</div>
 		</div><!--/.camArea-->

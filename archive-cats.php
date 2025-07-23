@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="contentsWrap">
+<div class="contentsWrap js-boxes">
 	<h3><span>猫たちのご紹介</span></h3>
 	<section>
 		<?php get_template_part('loop', 'cats'); ?>

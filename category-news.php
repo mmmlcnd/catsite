@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<div class="contentsWrap">
-	<h3><span>NEWS</span></h3>
+<div class="contentsWrap js-boxes">
+	<h3><span>お知らせ</span></h3>
 	<section>
 		<?php get_template_part('loop', 'news'); ?>
 	</section>
